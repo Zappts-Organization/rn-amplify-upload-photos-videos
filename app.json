@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "uploadBucketRN",
+    "slug": "uploadBucketRN",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "uploadBucketRN"
+}
