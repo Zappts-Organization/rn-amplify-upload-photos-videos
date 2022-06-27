@@ -153,8 +153,9 @@ const styles = StyleSheet.create({
   },
   logOutBtn: {
     width: "100%",
-    marginVertical: 40,
+    padding: 40,
     alignItems: "flex-end",
+    borderRadius: 10,
   },
 });
 
