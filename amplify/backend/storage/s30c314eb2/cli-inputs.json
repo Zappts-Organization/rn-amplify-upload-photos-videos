@@ -1,0 +1,14 @@
+{
+  "resourceName": "s30c314eb2",
+  "policyUUID": "0c314eb2",
+  "bucketName": "tutorialauthupload419b362493c9416fa2157c1dda736",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
