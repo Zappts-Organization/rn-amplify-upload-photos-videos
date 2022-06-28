@@ -1,4 +1,3 @@
-import { Storage } from "aws-amplify";
 import React, { useState } from "react";
 import {
   View,
@@ -9,7 +8,7 @@ import {
   Button,
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
-import { Auth } from "aws-amplify";
+import { Auth, Storage } from "aws-amplify";
 
 function Home() {
   const [asset, setAsset] = useState(null);

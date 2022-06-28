@@ -1,25 +1,21 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Home from "./pages/Home";
 import { withAuthenticator } from "aws-amplify-react-native";
 
-import { Localei18n } from "./components/Locale/i18n";
+import localei18n from "./components/Locale/i18n";
+import authAmplify from "./amplify/Auth/AuthAmplify";
 
-import { AuthAmplify } from "./amplify/Auth/AuthAmplify";
-
-const locale = Localei18n;
-const auth = AuthAmplify;
+localei18n();
+authAmplify();
 
 function App() {
   return (
-    locale &&
-    auth && (
-      <View style={styles.container}>
-        <StatusBar translucent />
-        <Home />
-      </View>
-    )
+    <View style={styles.container}>
+      <StatusBar translucent />
+      <Home />
+    </View>
   );
 }
 

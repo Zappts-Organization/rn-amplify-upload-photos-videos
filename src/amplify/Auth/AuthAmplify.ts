@@ -1,4 +1,7 @@
 import { Amplify, Auth } from "aws-amplify";
+
+import awsmobile from "../../aws-exports";
+
 import {
   identityPoolId,
   region,
@@ -8,28 +11,26 @@ import {
   disabled,
 } from "@env";
 
-import awsmobile from "../../aws-exports";
-
-Amplify.configure({
-  Auth: {
-    identityPoolId: identityPoolId,
-    region: region,
-    userPoolId: userPoolId,
-    userPoolWebClientId: userPoolWebClientId,
-  },
-  Storage: {
-    AWSS3: {
-      bucket: bucket,
+function authAmplify() {
+  Amplify.configure({
+    Auth: {
+      identityPoolId: identityPoolId,
       region: region,
+      userPoolId: userPoolId,
+      userPoolWebClientId: userPoolWebClientId,
     },
-  },
-  Analytics: {
-    disabled: disabled,
-  },
-});
+    Storage: {
+      AWSS3: {
+        bucket: bucket,
+        region: region,
+      },
+    },
+    Analytics: {
+      disabled: disabled,
+    },
+  });
 
-Auth.configure(awsmobile);
+  Auth.configure(awsmobile);
+}
 
-const AuthAmplify = () => null;
-
-export { AuthAmplify };
+export default authAmplify;
